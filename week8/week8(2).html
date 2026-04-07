@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                background-color: greenyellow;
+                margin: auto;
+                animation: circle 4s linear infinite;
+                animation-delay: 2s;
+                animation-direction: alternate;
+                border-radius: 200%;
+                position: relative;
+            }
+            @keyframes circle{
+                from{
+                  top: 0px;
+                }
+                to{
+                   top: 100px;
+                }
+            }
+        </style>
+    </head>
+    <body style="background-image: url(https://i.pinimg.com/736x/a7/3a/e7/a73ae738d6bddba8f14b575a19c80a89.jpg); background-size: cover;">
+        <h2 style="text-align: center; font-style: italic; color: blue;">A circle bouncing top and bottom</h2>
+        <p style="font-size: x-large; text-align: center; font-style: italic;"> Watch the ball bounce smoothly up and down</p>
+        <p style="font-size: x-large; text-align: center; font-style: italic;">This animation shows vertical movement using css</p>
+        <div></div>
+    </body>
+</html>

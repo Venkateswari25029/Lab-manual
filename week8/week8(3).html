@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .Circle{
+                width:100px;
+                height:100px;
+                background-color: lightcoral ;
+                border-radius: 47%;
+                position:relative;
+                margin: auto;
+                animation-name: Rotate;
+                animation-duration: 5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+            }
+            @keyframes Rotate {
+                0%{
+                    top:0;
+                    left:0;
+                    transform: rotate(0deg) translate(0);
+                }
+                
+                100% {
+                   top: 0;
+                   left: 0;
+                   transform: rotate(360deg) translate(180px);
+                }
+            }
+        </style>
+    </head>
+    <body style="background-image: url(https://i.pinimg.com/1200x/a7/bf/8e/a7bf8e534918be24fea8fbeeb8552aa9.jpg); background-size: cover;">
+        <h1 style="font-family: 'Times New Roman', Times, serif;font-style: oblique;color:purple;text-align: center;text-decoration: underline;"> Moving rotating circle</h1>
+        <p style="font-size: x-large; text-align: center; font-style: italic;">Watch the ball move horizontally and rotate at the same time </p>
+        <p style="font-size: x-large; text-align: center; font-style: italic;">This animation combines transition and rotation using css</p>
+        <div class ="Circle"></div>
+    </body>
+</html>
+
+
