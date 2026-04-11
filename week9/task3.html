@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <h3>Number systemmm.</h3>
+    <p>Enter the number:<input id="n" type="number"></p>
+    <button onclick="even()">Even/Odd</button>
+    <button onclick="prime()">Prime</button>
+    <button onclick="fact()">Factorial</button>
+    <button onclick="arm()">Armstrong</button>
+    <p id="out"></p>
+</body>
+<script>
+    function even(){
+        var n=document.getElementById("n").value;
+        var out=document.getElementById("out");
+        if(n%2==0)
+            out.innerHTML="Even";
+        
+        else
+        out.innerHTML="odd";
+    }
+    function prime(){
+        var n=document.getElementById("n").value;
+        var out=document.getElementById("out");
+        if (n <= 1) flag = 1;
+
+            for (i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            if (flag == 0)
+                out.innerHTML="Prime";
+            else
+                out.innerHTML = "Not Prime";
+    }
+    function fact(){
+        var n=document.getElementById("n").value;
+        var out=document.getElementById("out");
+        let fact=1;
+        for(i=1;i<=n;i++){
+            fact=fact*i;
+        }
+        if(fact)
+            out.innerHTML=fact;
+    }
+    function arm() {
+            var n = document.getElementById("n").value;
+            var out = document.getElementById("out");
+            var temp = n, sum = 0;
+
+            while (temp > 0) {
+                var d = temp % 10;
+                sum = sum + d*d*d;
+                temp = parseInt(temp / 10);
+            }
+
+            if (sum == n)
+                out.innerHTML = "Armstrong";
+            else
+                out.innerHTML = "Not Armstrong";
+        }
+</script>
+</html>
